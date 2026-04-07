@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - Olivier Portfolio</title>
+</head>
+
 <body style="
     margin:0;
     font-family: Arial, sans-serif;
@@ -35,7 +41,7 @@
     padding:20px;
 ">
 
-    <!-- HOLOGRAM IMAGE -->
+    <!-- HOLOGRAM IMAGE (FACE TRACK STYLE) -->
     <div style="perspective:1000px; margin-bottom:20px;">
         <div id="card" style="
             width:180px;
@@ -52,7 +58,6 @@
                 filter:brightness(1.2) contrast(1.3);
             ">
 
-            <!-- glow -->
             <div style="
                 position:absolute;
                 width:200px;
@@ -62,7 +67,6 @@
                 top:-10px;
                 left:-10px;
                 z-index:-1;
-                animation:pulse 3s infinite;
             "></div>
 
         </div>
@@ -74,7 +78,7 @@
         I am a Web Developer and Embedded Systems Engineer focused on building modern digital and electronic solutions.
     </p>
 
-    <!-- BOXES -->
+    <!-- BOXES SECTION -->
     <div style="
         display:flex;
         flex-wrap:wrap;
@@ -95,33 +99,68 @@
 
         <div style="width:250px; padding:15px; border:1px solid white; background: rgba(0,0,0,0.6); border-radius:10px;">
             <h3>📡 IoT Projects</h3>
-            <p>Connecting hardware and software to create intelligent real-world systems.</p>
+            <p>Connecting hardware and software to create intelligent systems.</p>
         </div>
 
         <div style="width:250px; padding:15px; border:1px solid white; background: rgba(0,0,0,0.6); border-radius:10px;">
             <h3>🛠️ Innovation</h3>
-            <p>Turning ideas into real prototypes that solve practical problems.</p>
+            <p>Turning ideas into real working prototypes.</p>
+        </div>
+
+        <!-- YOUTUBE VIDEO 1 -->
+        <div style="width:250px; padding:15px; border:1px solid white; background: rgba(0,0,0,0.6); border-radius:10px;">
+            <h3>🎥 Embedded System Demo 1</h3>
+
+            <iframe width="100%" height="150"
+                src="https://www.youtube.com/embed/3FJ7h3r9h1g"
+                frameborder="0"
+                allowfullscreen
+                style="border-radius:8px;">
+            </iframe>
+
+            <p>Arduino + sensor project demonstration.</p>
+        </div>
+
+        <!-- YOUTUBE VIDEO 2 -->
+        <div style="width:250px; padding:15px; border:1px solid white; background: rgba(0,0,0,0.6); border-radius:10px;">
+            <h3>🎬 Embedded System Demo 2</h3>
+
+            <iframe width="100%" height="150"
+                src="https://www.youtube.com/embed/1k6W1C4p7t8"
+                frameborder="0"
+                allowfullscreen
+                style="border-radius:8px;">
+            </iframe>
+
+            <p>Smart automation system project.</p>
         </div>
 
     </div>
 
     <!-- BUTTONS -->
     <div style="margin-top:25px;">
-        <a href="contact.html" style="background:#38bdf8; color:black; padding:10px 15px; margin:5px; text-decoration:none; border-radius:5px;">Hire Me</a>
-        <a href="gallery.html" style="border:1px solid white; color:white; padding:10px 15px; margin:5px; text-decoration:none; border-radius:5px;">View Projects</a>
+        <a href="contact.html" style="
+            background:#38bdf8;
+            color:black;
+            padding:10px 15px;
+            margin:5px;
+            text-decoration:none;
+            border-radius:5px;
+        ">Hire Me</a>
+
+        <a href="gallery.html" style="
+            border:1px solid white;
+            color:white;
+            padding:10px 15px;
+            margin:5px;
+            text-decoration:none;
+            border-radius:5px;
+        ">View Projects</a>
     </div>
 
 </div>
 
-<!-- ANIMATIONS + FACE TRACKING -->
-<style>
-@keyframes pulse {
-    0% { opacity:0.5; transform:scale(1); }
-    50% { opacity:1; transform:scale(1.1); }
-    100% { opacity:0.5; transform:scale(1); }
-}
-</style>
-
+<!-- FACE TRACK SCRIPT -->
 <script>
 const card = document.getElementById("card");
 
@@ -138,3 +177,4 @@ document.addEventListener("mouseleave", () => {
 </script>
 
 </body>
+</html>
