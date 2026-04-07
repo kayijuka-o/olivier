@@ -1,9 +1,124 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>About</title>
-    <link rel="stylesheet" href="style.css">
+    <title>About - Olivier Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('1.jpg') no-repeat center center/cover;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* DARK OVERLAY */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: -1;
+        }
+
+        header {
+            background: rgba(0,0,0,0.8);
+            padding: 15px;
+            text-align: center;
+            animation: fadeDown 1s ease;
+        }
+
+        nav a {
+            margin: 10px;
+            text-decoration: none;
+            color: #00ffff;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+            text-shadow: 0 0 10px #00ffff;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        /* BOX STYLE */
+        .box {
+            background: rgba(0,0,0,0.7);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+            transition: 0.4s;
+            transform: translateY(40px);
+            opacity: 0;
+            animation: fadeUp 1s forwards;
+        }
+
+        /* STAGGER ANIMATION */
+        .box:nth-child(1) { animation-delay: 0.3s; }
+        .box:nth-child(2) { animation-delay: 0.5s; }
+        .box:nth-child(3) { animation-delay: 0.7s; }
+        .box:nth-child(4) { animation-delay: 0.9s; }
+        .box:nth-child(5) { animation-delay: 1.1s; }
+
+        /* HOVER EFFECT */
+        .box:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 0 20px #00ffff;
+        }
+
+        h2 {
+            color: #00ffff;
+        }
+
+        /* SKILLS */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #00ffff;
+            color: black;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 10px white;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
 <header>
@@ -18,17 +133,49 @@
 
 <div class="container">
 
-    <h2>English</h2>
-    <p>
-        I am a web developer and embedded systems engineer focused on modern digital solutions.
-        I build responsive websites and work with Arduino and IoT systems.
-    </p>
+    <div class="box">
+        <h2>Who I Am</h2>
+        <p>
+            I am Olivier KAYIJUKA, a passionate developer focused on modern digital systems.
+            I combine web development and embedded systems to create smart solutions.
+        </p>
+    </div>
 
-    <h2>Français</h2>
-    <p>
-        Je suis développeur web et ingénieur en systèmes embarqués.
-        Je crée des solutions numériques modernes et des systèmes électroniques intelligents.
-    </p>
+    <div class="box">
+        <h2>English</h2>
+        <p>
+            I am a web developer and embedded systems engineer. I build responsive websites
+            and develop Arduino and IoT systems for real-world applications.
+        </p>
+    </div>
+
+    <div class="box">
+        <h2>Français</h2>
+        <p>
+            Je suis développeur web et ingénieur en systèmes embarqués.
+            Je crée des systèmes intelligents et des solutions numériques modernes.
+        </p>
+    </div>
+
+    <div class="box">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Arduino</div>
+            <div class="skill">IoT</div>
+            <div class="skill">C/C++</div>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>My Vision</h2>
+        <p>
+            My goal is to become an advanced engineer in both software and hardware,
+            building smart systems, automation, and future technologies.
+        </p>
+    </div>
 
 </div>
 
